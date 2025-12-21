@@ -2,9 +2,6 @@
 using FictionalSchool.Menus;
 using FictionalSchool.Models;
 using Spectre.Console;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FictionalSchool.Services
 {

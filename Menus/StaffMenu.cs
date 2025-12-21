@@ -1,8 +1,5 @@
 ﻿using FictionalSchool.Services;
 using Spectre.Console;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FictionalSchool.Menus
 {
