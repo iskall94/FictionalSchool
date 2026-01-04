@@ -13,6 +13,8 @@ public partial class Course
 
     public int? Points { get; set; }
 
+    public bool IsActive { get; set; }
+
     public virtual ICollection<CoursesStudent> CoursesStudents { get; set; } = new List<CoursesStudent>();
 
     public virtual ICollection<Class> Classes { get; set; } = new List<Class>();

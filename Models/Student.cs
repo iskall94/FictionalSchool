@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace FictionalSchool.Models;
+﻿namespace FictionalSchool.Models;
 
 public partial class Student
 {

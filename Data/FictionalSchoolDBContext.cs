@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using FictionalSchool.Models;
+﻿using FictionalSchool.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FictionalSchool.Data;
@@ -66,6 +64,7 @@ public partial class FictionalSchoolDBContext : DbContext
 
             entity.Property(e => e.CourseCode).HasMaxLength(6);
             entity.Property(e => e.CourseName).HasMaxLength(50);
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
         });
 
         modelBuilder.Entity<CoursesStudent>(entity =>
@@ -100,6 +99,10 @@ public partial class FictionalSchoolDBContext : DbContext
             entity.Property(e => e.LastName).HasMaxLength(25);
             entity.Property(e => e.PersonalNumber).HasMaxLength(13);
             entity.Property(e => e.Role).HasMaxLength(50);
+            entity.Property(e => e.Salary)
+                .HasDefaultValue(45000m)
+                .HasColumnType("decimal(10, 0)");
+            entity.Property(e => e.StaffStartDate).HasDefaultValueSql("(CONVERT([date],getdate()))");
 
             entity.HasMany(d => d.Courses).WithMany(p => p.Staff)
                 .UsingEntity<Dictionary<string, object>>(

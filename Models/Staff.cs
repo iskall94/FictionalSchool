@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace FictionalSchool.Models;
+﻿namespace FictionalSchool.Models;
 
 public partial class Staff
 {
@@ -14,6 +11,12 @@ public partial class Staff
     public string? LastName { get; set; }
 
     public string? PersonalNumber { get; set; }
+
+    public DateOnly StaffStartDate { get; set; }
+
+    public DateOnly? StaffEndDate { get; set; }
+
+    public decimal Salary { get; set; }
 
     public virtual ICollection<Class> Classes { get; set; } = new List<Class>();
 

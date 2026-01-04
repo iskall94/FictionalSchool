@@ -16,6 +16,7 @@ namespace FictionalSchool.Menus
                         [
                         "Gå till studentmenyn",
                         "Gå till personalmenyn",
+                        "Gå till generell hantering",
                         "Avsluta"
                         ]));
 
@@ -26,6 +27,9 @@ namespace FictionalSchool.Menus
                         break;
                     case "Gå till personalmenyn":
                         StaffMenu.ShowStaffMenu();
+                        break;
+                    case "Gå till generell hantering":
+                        GeneralMenu.ShowGeneralMenu();
                         break;
                     case "Avsluta":
                         Console.CursorVisible = false;

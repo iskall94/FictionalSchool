@@ -30,9 +30,7 @@ namespace FictionalSchool.Services
             AnsiConsole.Write(table);
 
             AnsiConsole.Write("\nKlicka någon knapp för att gå tillbaka till föregående meny...");
-
-            Console.ReadKey();
-
+            Console.ReadKey(true);
             StaffMenu.StaffCategoryMenu();
         }
 
@@ -60,8 +58,7 @@ namespace FictionalSchool.Services
             AnsiConsole.Write(table);
             
             AnsiConsole.Write("\nKlicka någon knapp för att gå tillbaka till föregående meny...");
-            
-            Console.ReadKey();
+            Console.ReadKey(true);
             StaffMenu.ShowStaffMenu();
         }
 
@@ -97,7 +94,7 @@ namespace FictionalSchool.Services
 
                 AnsiConsole.MarkupLine($"[green]Personal {firstName} {lastName} har lagts till![/]");
                 AnsiConsole.Write("\nKlicka någon knapp för att gå tillbaka till föregående meny...");
-                Console.ReadKey();
+                Console.ReadKey(true);
             }
             StaffMenu.ShowStaffMenu();
         }
